@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base target="_top">
+
+  <script>
+    window.onload = function() {
+    
+    setInterval(updatesheet, 5000);
+    setInterval(updatebutton, 5000);
+  
+  google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('charname').innerText = data;
+    })
+    .getName();
+    
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('charclass').innerText = data;
+    })
+    .getClass();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('charlvl').innerText = data;
+    })
+    .getLvl();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('charrace').innerText = data;
+    })
+    .getRace();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('playername').innerText = data;
+    })
+    .getPlayer();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('charbg').innerText = data;
+    })
+    .getCharbg();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('strscore').innerText = data;
+    })
+    .getSTR();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('strbonus').innerText = data;
+    })
+    .getSTRbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('dexscore').innerText = data;
+    })
+    .getDEX();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('dexbonus').innerText = data;
+    })
+    .getDEXbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('conscore').innerText = data;
+    })
+    .getCON();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('conbonus').innerText = data;
+    })
+    .getCONbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('intscore').innerText = data;
+    })
+    .getINT();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('intbonus').innerText = data;
+    })
+    .getINTbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('wisscore').innerText = data;
+    })
+    .getWIS();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('wisbonus').innerText = data;
+    })
+    .getWISbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('chascore').innerText = data;
+    })
+    .getCHA();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('chabonus').innerText = data;
+    })
+    .getCHAbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('athlscore').innerText = data;
+    })
+    .getATHLscore(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('acroscore').innerText = data;
+    })
+    .getACROscore();     
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('SOHscore').innerText = data;
+    })
+    .getSOHscore(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('stealthscore').innerText = data;
+    })
+    .getStealthscore(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('arcascore').innerText = data;
+    })
+    .getArcana(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('hisscore').innerText = data;
+    })
+    .getHistory(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('invscore').innerText = data;
+    })
+    .getInvestigation(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('natuscore').innerText = data;
+    })
+    .getNature(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('reliscore').innerText = data;
+    })
+    .getReligion(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('anhandscore').innerText = data;
+    })
+    .getAnimals(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('insigscore').innerText = data;
+    })
+    .getInsight(); 
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('mediscore').innerText = data;
+    })
+    .getMedicine(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('percscore').innerText = data;
+    })
+    .getPerception();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('survscore').innerText = data;
+    })
+    .getSurvival(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('decscore').innerText = data;
+    })
+    .getDeception();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('intimscore').innerText = data;
+    })
+    .getIntimidation(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('perfscore').innerText = data;
+    })
+    .getPerformance(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('persuscore').innerText = data;
+    })
+    .getPersuasion(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('init').innerText = data;
+    })
+    .getInitiative();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('prof').innerText = data;
+    })
+    .getProficiency();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('AC').innerText = data;
+    })
+    .getArmorClass();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('pasper').innerText = data;
+    })
+    .getPassivePerception();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('speed').innerText = data;
+    })
+    .getMovement();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('spellcasting').innerText = data;
+    })
+    .getSpellcasting();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('spellsave').innerText = data;
+    })
+    .getSpellSave();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('spcastmod').innerText = data;
+    })
+    .getSpellCastMod();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('MaxHP').innerText = data;
+    })
+    .getMaxHP();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('THP').innerText = data;
+    })
+    .getTHP();
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('HP').innerText = data;
+    })
+    .getHP();
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('Max Hit Dice').innerText = data;
+    })
+    .getMaxHitDice();   
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('Exhaustion').innerText = data;
+    })
+    .getExhaustion();  
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('STRsave').innerText = data;
+    })
+    .getSTRsave(); 
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('DEXsave').innerText = data;
+    })
+    .getDEXsave(); 
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('CONsave').innerText = data;
+    })
+    .getCONsave(); 
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('INTsave').innerText = data;
+    })
+    .getINTsave(); 
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('WISsave').innerText = data;
+    })
+    .getWISsave(); 
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('CHAsave').innerText = data;
+    })
+    .getCHAsave(); 
+  
+         google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('Exhaustion').innerText = data;
+    })
+    .getExhaustion(); 
+
+             google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('atk1name').innerText = data;
+    })
+    .atk1name(); 
+    
+       google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk1bonus').innerText = data;})
+    .atk1bonus();
+
+           google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk1range').innerText = data;})
+    .atk1range();
+
+           google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk1dmg').innerText = data;})
+    .atk1dmg();
+    
+            google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('atk2name').innerText = data;
+    })
+    .atk2name(); 
+    
+       google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk2bonus').innerText = data;})
+    .atk2bonus();
+
+           google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk2range').innerText = data;})
+    .atk2range();
+
+           google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk2dmg').innerText = data;})
+    .atk2dmg();
+
+            google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('atk3name').innerText = data;
+    })
+    .atk3name(); 
+    
+       google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk3bonus').innerText = data;})
+    .atk3bonus();
+
+           google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk3range').innerText = data;})
+    .atk3range();
+
+           google.script.run
+    .withSuccessHandler(function(data) {    
+       document.getElementById('atk3dmg').innerText = data;})
+    .atk3dmg();
+
+
+ // google.script.run
+  //  .withSuccessHandler(function(dataArray) {
+  //     document.getElementById('list-display').innerText = dataArray.join(", ");
+  //  })
+  //  .getRangeList();
+};
+
+
+ function runHeal() {
+
+   const hitdiebutton = document.getElementById("hitdiebtn");
+   hitdiebutton.innerHTML = 'Working...';
+
+    google.script.run
+   .withSuccessHandler(function(data) {
+       document.getElementById('Hit Dice').innerText = data;
+    })
+    .rollhitdie1();
+
+ }
+
+  function recordshort() {
+
+  const shortrbutton = document.getElementById("shortrest");
+   shortrbutton.textContent = 'Working...';
+    google.script.run
+   .withSuccessHandler(function(data) {
+    })
+    .shortr();
+  };
+
+ function recordlong() {
+
+  const longrbutton = document.getElementById("longrest");
+   longrbutton.textContent = 'Working...';
+    google.script.run
+   .withSuccessHandler(function(data) {
+    })
+    .longr();
+  };
+
+ function recordcomplete() {
+    const comprbutton = document.getElementById("completerest");
+     comprbutton.textContent = 'Working...';
+    google.script.run
+   .withSuccessHandler(function(data) {
+    })
+    .completer();
+  };
+
+  function rollSpellAttack() {
+    google.script.run
+    .withSuccessHandler(function(data) {     document.getElementById('roll-result').innerText = data;})
+    .rollspells();
+
+  };
+
+  function attack1() {
+    google.script.run
+    .withSuccessHandler(function(data) {     document.getElementById('roll-result').innerText = data;})
+    .rollAtk1();    
+  }
+
+    function attack2() {
+    google.script.run
+    .withSuccessHandler(function(data) {     document.getElementById('roll-result').innerText = data;})
+    .rollAtk2();    
+  }
+
+      function attack3() {
+    google.script.run
+    .withSuccessHandler(function(data) {     document.getElementById('roll-result').innerText = data;})
+    .rollAtk3();    
+  }
+
+    function dmg1() {
+    google.script.run
+    .withSuccessHandler(function(data) {  document.getElementById('roll-result').innerText = data;})
+    .rollAtkDmg1();    
+  }
+
+      function dmg2() {
+    google.script.run
+    .withSuccessHandler(function(data) {  document.getElementById('roll-result').innerText = data;})
+    .rollAtkDmg2();    
+  }
+
+        function dmg3() {
+    google.script.run
+    .withSuccessHandler(function(data) {  document.getElementById('roll-result').innerText = data;})
+    .rollAtkDmg3();    
+  }
+
+  function updatesheet() {
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('Hit Dice').innerText = data;
+    })
+    .getHitDice();   
+
+      
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('HP').innerText = data;
+    })
+
+    .getHP();
+
+       google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('Exhaustion').innerText = data;
+    })
+    .getExhaustion();
+
+        google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('strscore').innerText = data;
+    })
+    .getSTR();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('strbonus').innerText = data;
+    })
+    .getSTRbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('dexscore').innerText = data;
+    })
+    .getDEX();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('dexbonus').innerText = data;
+    })
+    .getDEXbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('conscore').innerText = data;
+    })
+    .getCON();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('conbonus').innerText = data;
+    })
+    .getCONbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('intscore').innerText = data;
+    })
+    .getINT();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('intbonus').innerText = data;
+    })
+    .getINTbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('wisscore').innerText = data;
+    })
+    .getWIS();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('wisbonus').innerText = data;
+    })
+    .getWISbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('chascore').innerText = data;
+    })
+    .getCHA();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('chabonus').innerText = data;
+    })
+    .getCHAbon();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('athlscore').innerText = data;
+    })
+    .getATHLscore(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('acroscore').innerText = data;
+    })
+    .getACROscore();     
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('SOHscore').innerText = data;
+    })
+    .getSOHscore(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('stealthscore').innerText = data;
+    })
+    .getStealthscore(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('arcascore').innerText = data;
+    })
+    .getArcana(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('hisscore').innerText = data;
+    })
+    .getHistory(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('invscore').innerText = data;
+    })
+    .getInvestigation(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('natuscore').innerText = data;
+    })
+    .getNature(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('reliscore').innerText = data;
+    })
+    .getReligion(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('anhandscore').innerText = data;
+    })
+    .getAnimals(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('insigscore').innerText = data;
+    })
+    .getInsight(); 
+
+      google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('mediscore').innerText = data;
+    })
+    .getMedicine(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('percscore').innerText = data;
+    })
+    .getPerception();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('survscore').innerText = data;
+    })
+    .getSurvival(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('decscore').innerText = data;
+    })
+    .getDeception();
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('intimscore').innerText = data;
+    })
+    .getIntimidation(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('perfscore').innerText = data;
+    })
+    .getPerformance(); 
+
+    google.script.run
+    .withSuccessHandler(function(data) {
+       document.getElementById('persuscore').innerText = data;
+    })
+    .getPersuasion(); 
+
+  };
+
+     function updatebutton() {
+   const hitdiebutton = document.getElementById("hitdiebtn");
+   const longrbutton = document.getElementById("longrest");
+   const completebutton = document.getElementById("completerest");
+   const shortrbutton = document.getElementById("shortrest");
+   const dmgbutton = document.getElementById("dmgbtn");
+   const healbutton = document.getElementById("healbtn")
+
+       healbutton.textContent = 'Record Healing';
+       dmgbutton.textContent = 'Record Damage';
+       shortrbutton.textContent = 'Record Short Rest';
+       hitdiebutton.textContent = 'Spend Hit Die';
+       longrbutton.textContent = 'Record Long Rest';
+       completebutton.textContent = 'Record Complete Rest';
+     };
+
+     function rollSTR() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollStrength();
+     }
+
+     function rollDEX() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollDexterity();
+     }
+
+     function rollCON() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollConstitution();
+     }
+
+     function rollINT() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollIntelligence();
+     }
+
+     function rollWIS() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollWisdom();
+     }
+     function rollCHA() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollCharisma();
+     }
+     function rollAthletics() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollAthl();
+     }
+     function rollAcrobatics() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollAcro();
+     }
+     function rollSOH() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollSleight();
+     }
+     function rollStealth() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollStl();
+     }
+     function rollArcana() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollArca();
+     }
+     function rollHistory() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollHist();
+     }
+     function rollInvestigation() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollInve();
+     }
+     function rollNature() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollNatu();
+     }
+     function rollReligion() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollReli();
+     }
+
+     function rollAnimals() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollAnim();
+     }
+
+     function rollInsight() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollInsi();
+     }
+     function rollMedicine() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollMedi();
+     }
+     function rollPerception() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollPerc();
+     }
+     function rollSurvival() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollSurv();
+     }
+     function rollDeception() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollDece();
+     }
+
+     function rollIntimidation() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollInti();
+     }
+
+     function rollPerformance() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollPerf();
+     }
+
+     function rollPersuasion() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollPers();
+     }
+     
+     function rollSTRsave() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollSTRsv();
+     }
+
+     function rollDEXsave() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollDEXsv();
+     }
+
+     function rollCONsave() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollCONsv();
+     }
+
+     function rollINTsave() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollINTsv();
+     }
+
+     function rollWISsave() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollWISsv();
+     }
+
+     function rollCHAsave() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollCHAsv();
+     }
+
+     function rollInitiative() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .rollInit();
+     }
+     function rolld20() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .roll20();
+     }
+     function rolld12() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .roll12();
+     }
+
+     function rolld10() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .roll10();
+     }
+
+     function rolld8() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .roll8();
+     }
+
+     function rolld6() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .roll6();
+     }
+
+     function rolld4() {
+     google.script.run
+     .withSuccessHandler(function(data){     document.getElementById('roll-result').innerText = data;})
+
+       .roll4();
+     }
+     
+    function damageinput() {
+    var userInput = document.getElementById("dmgheal").value;
+    google.script.run.processText(userInput);
+    dmgbtn.textContent = 'Submitted!';
+
+    }
+    function healinput() {
+    var userInput = document.getElementById("dmgheal").value;
+    google.script.run.processheal(userInput);
+    healbtn.textContent = 'Submitted!';
+
+    }
+
+    function addExhaust(){
+     google.script.run
+     .withSuccessHandler(function(data){})
+
+       .plusexhaust();
+
+    }
+
+    function minusExhaust(){
+     google.script.run
+     .withSuccessHandler(function(data){})
+
+       .reduceexhaust();
+    }
+
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Character Sheet with Dice Roller</title>
+   <!-- <script src=" "></script>-->
+    <style>
+        p {
+          font-size: 24px;
+           color: #795548;
+           margin-bottom:0.1%;
+           margin-top: 0.1%;
+        }
+        h1 {
+          text-align: center;
+          font-size: 60px;
+          color: #D7CCC8;
+          border-bottom: 3px solid #BCAAA4;
+        }
+        h2 {
+          text-align: center;
+          font-size: 60px;
+          color: #EFEBE9;
+          border-bottom: 1px solid #FAFAFA;
+          margin-bottom: .1%;
+        }
+        h3 {
+          text-align: center;
+          font-size: 48px;
+          color: #795548;
+          margin-top: .2%;
+          margin-bottom: .2%;
+        }
+
+        .small-text{
+          font-size: 20px;
+        }
+        .large-text{
+          font-size: 45px;
+          margin-top: 0;
+        }
+        .larger-text{
+          font-size: 50px;
+        }
+        .bolder-larger-text{
+          font-size: 60px;
+          font-weight: bolder;
+        }
+        .stat-name {
+          font-weight: bolder;
+          font-size: 50px;
+          text-align: center;
+          color: #795548;
+          margin-top: .5%;
+          margin-bottom: .5%;
+
+        }
+        .stat-score {
+          font-weight: bold;
+          font-size: 30px;
+          text-align: center;
+          color: #795548;
+          margin-top: .5%;
+          margin-bottom: .5%;
+
+        }
+        .rollbox {
+          float: center;
+          text-align: center;
+          width: 99%;
+          height: auto;
+          border-radius: 15px;
+          border: 2px solid #452F2B;
+          background-color: #EFEBE9;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: .5%;
+          font-size: 35px;
+          font-weight: bolder;
+          color: #795548;
+        }
+
+        .basicbox {
+          float: center;
+          text-align: center;
+          width: 99%;
+          height: auto;
+          border-radius: 10px;
+          border: 2px solid #452F2B;
+          background-color: #EFEBE9;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: .5%;
+          color: #795548;
+        }
+
+        body {
+          background-color: #452F2B;
+          font-family: 'Helvetica', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sheet {
+          background-color: #BCAAA4;
+          width: 98%;
+          //display: flex;
+          //flex-direction: column;
+         // justify-content: center;
+          //align-items: center;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1px;
+          height: 100%;
+          margin: 0 auto;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba (0,0,0,0.1);
+          padding: .5%;
+          margin-bottom: 80px;
+          margin-top: 80px;
+        }
+        .top-grid {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 25% 1fr;
+          gap: 10px;
+        }
+        
+        .sticky-grid {
+          position: sticky;
+          background-color: #BCAAA4;
+          top: 0;
+          height: auto;
+          max-height: 20%;
+          width: auto;
+          display: grid;
+          grid-template-columns: 33% 1fr 1fr 1fr 33%;
+         // border: 3px solid red;
+          gap: .5%;
+          float: center;
+          align: center;
+          padding: 0%;
+        }
+        .dual-grid {
+          width: 95%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2%;
+          padding: 1%;
+        }
+          .mid-grid {
+          float: center;
+          align: top;
+          width: 99%;
+          display: grid;
+          grid-template-columns: 35% 1fr;
+          gap: 1%;
+          padding: 0%;
+        }
+          .action-grid {
+          float: center;
+          align: top;
+          width: 99%;
+          display: grid;
+          grid-template-columns: 35% 1fr 1fr 35%;
+          gap: 1%;
+          padding: 0%;
+        }
+        .triple-grid {
+          width: auto%;
+          display: grid;
+          align: top;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1%;
+          padding: 0%;
+        }
+
+        .six-grid {
+          height: auto;
+          width: auto%;
+         // display: flex;
+         // flex-direction: row;
+          float: center;
+          align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          gap: 1%;
+          padding: 0%;
+        }
+        .button-grid {
+          width: auto%;
+          height: auto%;
+          align-items: top;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1%;
+          padding: 0%;
+        }
+        .container{
+          float: center;
+          justify-content: center;
+          text-align: center;
+          width: 99%;
+          height: 99%;
+          border-radius: 5px;
+          display: grid;
+          grid-template-columns: 1fr;
+          //align-items: center;
+          padding: 1px;
+          //border: 3px solid red;
+
+        }
+        .exhbox{
+          float: center;
+          justify-content: center;
+          text-align: center;
+          width: 99%;
+          height: 99%;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: row;
+          //align-items: center;
+          padding: 1px;
+          //border: 3px solid red;
+
+        }
+       
+         .statbox{
+          float: center;
+          text-align: center;
+          width: 99%;
+          height: auto;
+          border-radius: 10px;
+          border: 2px solid #452F2B;
+          background-color: #EFEBE9;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: .5%;
+          color: #795548;
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+         .restbox{
+          float: center;
+          text-align: center;
+          align-items: start;
+          width: auto;
+          height: 98%;
+          border-radius: 15px;
+          border: 2px solid #452F2B;
+          background-color: #EFEBE9;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 1%;
+
+        }
+
+        .statbutton{
+          float: center;
+          text-align: center;
+          width: 99%;
+          height: 99%;
+          border-radius: 10px;
+          border: 2px solid #452F2B;
+          background-color: #EFEBE9;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: .5%;
+          color: #795548;
+        }
+
+        .statbutton:hover {
+          background-color: #fafafa;
+          border: 4px solid #452F2B;
+        }
+
+        .restbutton {
+          background-color: #452F2B;
+          float: center;
+          font-size: 22px;
+          color: #fafafa;
+          border: none;
+          padding: 2%;
+          border-radius: 5px;
+          cursor: pointer;
+          Width: 80%;
+          Height: 140px;
+        }
+        .shortrestbutton {
+          background-color: #452F2B;
+          float: center;
+          font-size: 22px;
+          color: #fafafa;
+          border: none;
+          padding: 2%;
+          border-radius: 5px;
+          cursor: pointer;
+          Width: 80%;
+          Height: 55px;
+        }
+
+        .restbutton:hover {
+          background-color: #A1887F;
+          font-weight: bolder;
+        }
+        .shortrestbutton:hover {
+          background-color: #A1887F;
+          font-weight: bolder;
+        }
+        .atkbtn {
+          background-color: #452F2B;
+          float: center;
+          font-size: 22px;
+          color: #fafafa;
+          border: none;
+          padding: 2%;
+          border-radius: 5px;
+          cursor: pointer;
+          Width: 99%;
+          Height: 40px;
+        }
+
+        .atkbtn:hover {
+          background-color: #A1887F;
+          font-weight: bolder;
+        }
+
+        .atkdmgbtn {
+          background-color: #452F2B;
+          float: center;
+          font-size: 22px;
+          color: #fafafa;
+          border: none;
+          padding: 2%;
+          border-radius: 5px;
+          cursor: pointer;
+          Width: 99%;
+          Height: 40px;
+        }
+
+        .atkdmgbtn:hover {
+          background-color: #A1887F;
+          font-weight: bolder;
+        }
+          .dmgbtn {
+          background-color: #B71C1C;
+          float: center;
+          font-size: 22px;
+          color: #fafafa;
+          border: none;
+          padding: 2%;
+          border-radius: 5px;
+          cursor: pointer;
+          Width: 60%;
+          Height: 65px;
+        }
+        .dmgbtn:hover {
+          background-color: #E57373;
+          font-weight: bolder;
+        }
+          .healbtn {
+          display: grid;
+          grid-template-columns: 1fr;
+          background-color: #1B5E20;
+          float: center;
+          font-size: 22px;
+          color: #fafafa;
+          border: none;
+          padding: 2%;
+          border-radius: 5px;
+          cursor: pointer;
+          Width: 60%;
+          Height: 65px;
+        }
+        .healbtn:hover {
+          background-color: #66BB6A;
+          font-weight: bolder;
+        }
+        .d20 {
+ background-color: #BCAAA4;
+       height: 120px;
+       width: 120px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1K5zbdy07ggYlKgbsDf8VspvYgudksySa");
+     background-repeat:no-repeat;
+     }
+        .d20:hover {
+          background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1vNv9ranVFugKMskYmPG77VnNpsAreC1e");
+        }
+    .d12{
+ background-color: #BCAAA4;
+       height: 120px;
+       width: 120px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1Cjg0t4MwZfRQj8KUMq1YdYkD8ExUsy1E");
+     background-repeat:no-repeat;
+    }
+    .d12:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w120&id=17sHu8m4mLt-IQB7WwRp_wK93AllyjEjj");
+    }
+    .d10{
+ background-color: #BCAAA4;
+       height: 120px;
+       width: 120px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1phgfcPdibBxP5XoQezvVStbkNfLdatWs");
+     background-repeat:no-repeat;
+      
+    }
+    .d10:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1Wp9HW3nkm8KV1c76I3AEYuXBmSwS89P2");
+    }
+
+    .d8{
+ background-color: #BCAAA4;
+       height: 120px;
+       width: 120px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1HBnjWbZWHY2dQbeHvXOzc4cJUAotgmK-");
+     background-repeat:no-repeat;
+      
+    }
+    .d8:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1X8hd4JqsEFQJIkgRF12ncsX5vvo0PedM");
+    }
+
+    .d6{
+ background-color: #BCAAA4;
+       height: 120px;
+       width: 120px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1QT0PYfMt1RtnTrGyn60Bbb0_4TScyHWE");
+     background-repeat:no-repeat;
+      
+    }
+    .d6:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w120&id=17nrPDZQpFSGdjOD8ASK0_O2hTyvu6WSS");
+    }
+
+    .d4{
+ background-color: #BCAAA4;
+       height: 100%;
+       width: 100%;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w120&id=15_KKdi-w0zn_pk7LhC251yvIdipVCzbU");
+     background-repeat:no-repeat;
+      
+    }
+    .d4:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w120&id=1h-bNGHX5Jc6jIaSDnxT40g6LewGOHn8G");
+    }
+        .restbox textarea{
+          font-size: 18px;
+          text-align: center;
+          border: 2px solid #ccc;
+          background-color: #fafafa;
+          border-radius: 15px;
+          width: 50%;
+          resize: none;
+        }
+
+        select {
+          height: 45px;
+          width: 70px;
+        }
+
+    .plusbtn{
+ background-color: #EFEBE9;
+       height: 35px;
+       width: 35px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w35&id=1r3Vd_2i3HuUnnQtmuKOTo_9_j9Eabpcg");
+     background-repeat:no-repeat;
+      
+    }
+
+
+    .plusbtn:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w35&id=1tiidKNQAtM7kfmg6JJ-oNBY9UDJw5vr2");
+    }
+
+    .minusbtn{
+ background-color: #EFEBE9;
+       height: 35px;
+       width: 35px;
+     padding: 5px;
+     border: none;
+     background-image: url("https://drive.google.com/thumbnail?sz=w35&id=1ntpqp21ypAWD3UXX6QYtQe57AfjG9sZq");
+     background-repeat:no-repeat;
+      
+    }
+
+
+    .minusbtn:hover {
+      background-image: url("https://drive.google.com/thumbnail?sz=w35&id=1odcMf_eGwMa3Y-5l8h5xAkokISYP4Zvk");
+    }
+
+@media screen and (max-width: 900px) {
+
+
+  .mid-grid{
+    grid-template-columns: 100%;
+  }
+
+
+}
+    </style>
+
+<title>D&D Character Sheet with Dice Roller</title>
+</head>
+
+<body>
+  <h1> DND Character Sheet</h1>
+
+<div class="sheet"> 
+  <div class="sticky-grid">
+<div class="basicbox">
+    <h3><span id="charname">Name</span></h3>
+    <p class="small-text"><span id="playername">Player</span></p>
+    </div>
+    <div class="basicbox">
+      <p><b>AC</b></p>
+ <p class="stat-score"><span id="AC">0</span></p>
+        </div>
+        <div class="container">
+              <button class="button statbutton" id="initbtn" onclick="rollInitiative()">
+               <p><b>Init.</b></p>
+               <p class="stat-score"><span id="init">0</span></p>
+        </button>
+        </div>
+    <div class="basicbox">
+<p><b>HP</b></p>
+ <p class="stat-score"><span id="HP">0</span>/<span id="MaxHP">0</span></p>
+
+             </div>
+            
+
+
+  <div class="rollbox">
+    Result: <div id="roll-result"></div>
+        </div>
+  </div>
+
+  <div class="six-grid"> 
+    <div class="container">
+      <button class="button d4" id="d4btn" onclick="rolld4()">
+        </button>
+      </div>
+    <div class="container">
+      <button class="button d6" id="d6btn" onclick="rolld6()">
+        </button>
+      </div>
+    <div class="container">
+      <button class="button d8" id="d8btn" onclick="rolld8()">
+        </button>
+      </div>
+    <div class="container">
+      <button class="button d10" id="d10btn" onclick="rolld10()">
+        </button>
+      </div>
+    <div class="container">
+      <button class="button d12" id="d12btn" onclick="rolld12()">
+        </button>
+      </div>
+    <div class="container">
+      <button class="button d20" id="d20btn" onclick="rolld20()">
+        </button>
+      </div>
+
+  </div>
+<div class="top-grid">
+  <div class="statbox">
+    <div class="container">
+    <p class="stat-score"><big><big><span id="charclass">Class & Level</span> <span id="charlvl"></span></big></big></p>
+    </div>
+  <div class="container">
+        <p class="stat-score"><span id="charrace">Race</span></p>
+ </div>
+ <div class="container">
+                <p class="stat-score"><span id="charbg">Background</span></p>
+</div>
+ </div>
+
+      <div class="triple-grid">
+      
+          <button class="button statbutton" id="strbutton" onclick="rollSTR()"><p class="stat-name">STR</p>
+          <p class="stat-score"><span id="strscore">0</span></p>
+          <p class="stat-name"><span id="strbonus">+0</span></p>
+          </button>
+      
+        <button class="button statbutton" id="dexbutton" onclick="rollDEX()">
+          <p class="stat-name">DEX</p>
+          <p class="stat-score"><span id="dexscore">0</span></p>
+          <p class="stat-name"><span id="dexbonus">+0</span></p>
+          </button>
+        <button class="button statbutton" id="conbutton" onclick="rollCON()">
+          <p class="stat-name">CON</p>
+          <p class="stat-score"><span id="conscore">0</span></p>
+          <p class="stat-name"><span id="conbonus">+0</span></p>
+          </button>
+        <button class="button statbutton" id="intbutton" onclick="rollINT()">
+          <p class="stat-name">INT</p>
+          <p class="stat-score"><span id="intscore">0</span></p>
+          <p class="stat-name"><span id="intbonus">+0</span></p>
+          </button>
+        <button class="button statbutton" id="wisbutton" onclick="rollWIS()">
+          <p class="stat-name">WIS</p>
+          <p class="stat-score"><span id="wisscore">0</span></p>
+          <p class="stat-name"><span id="wisbonus">+0</span></p>
+          </button>
+        <button class="button statbutton" id="chabutton" onclick="rollCHA()">
+          <p class="stat-name">CHA</p>
+          <p class="stat-score"><span id="chascore">0</span></p>
+          <p class="stat-name"><span id="chabonus">+0</span></p>
+          </div>
+
+        </div>
+
+  <div class="container">
+    <center>
+    <div class="mid-grid">
+      <div class="container">
+        <h3>Saving Throws</h3>
+        <div class="triple-grid">
+     <button class="button statbutton" id="strsavebtn" onclick="rollSTRsave()">
+   <p class="stat-score">+<span id="STRsave">0</span> <br>STR</span></p>
+        </button>
+     <button class="button statbutton" id="dexsavebtn" onclick="rollDEXsave()">
+   <p class="stat-score">+<span id="DEXsave">0</span> <br>DEX</span></p>
+        </button>
+     <button class="button statbutton" id="consavebtn" onclick="rollCONsave()">
+   <p class="stat-score">+<span id="CONsave">0</span> <br>CON</span></p>
+        </button>
+     <button class="button statbutton" id="intsavebtn" onclick="rollINTsave()">
+   <p class="stat-score">+<span id="INTsave">0</span> <br>INT</span></p>
+        </button>
+     <button class="button statbutton" id="wissavebtn" onclick="rollWISsave()">
+   <p class="stat-score">+<span id="WISsave">0</span> <br>WIS</span></p>
+        </button>
+     <button class="button statbutton" id="chasavebtn" onclick="rollCHAsave()">
+   <p class="stat-score">+<span id="CHAsave">0</span> <br>CHA</span></p>
+        </button>
+          </div>
+        <h3>Skills</h3>
+      <button class="button statbutton" id="athlbtn" onclick="rollAthletics()">
+   <p class="stat-score">+<span id="athlscore">0</span> Athletics</span></p>
+        </button>
+        <button class="button statbutton" id="acrobtn" onclick="rollAcrobatics()">
+   <p class="stat-score">+<span id="acroscore">0</span> Acrobatics</span></p>
+        </button>
+      <button class="button statbutton" id="sohbtn" onclick="rollSOH()">
+   <p class="stat-score">+<span id="SOHscore">0</span> Sleight of Hand</span></p>
+        </button>
+      <button class="button statbutton" id="stlthbtn" onclick="rollStealth()">
+   <p class="stat-score">+<span id="stealthscore">0</span> Stealth</span></p>
+        </button>
+      <button class="button statbutton" id="arcabtn" onclick="rollArcana()">
+   <p class="stat-score">+<span id="arcascore">0</span> Arcana</span></p>      </button>
+      <button class="button statbutton" id="hisbtn" onclick="rollHistory()">
+   <p class="stat-score">+<span id="hisscore">0</span> History</span></p>
+        </button>
+      <button class="button statbutton" id="invbtn" onclick="rollInvestigation()">
+   <p class="stat-score">+<span id="invscore">0</span> Investigation</span></p>
+        </button>
+      <button class="button statbutton" id="natubtn" onclick="rollNature()">
+   <p class="stat-score">+<span id="natuscore">0</span> Nature</span></p>
+        </button>
+      <button class="button statbutton" id="relibtn" onclick="rollReligion()">
+   <p class="stat-score">+<span id="reliscore">0</span> Religion</span></p>
+        </button>
+      <button class="button statbutton" id="anhandbtn" onclick="rollAnimals()">
+   <p class="stat-score">+<span id="anhandscore">0</span> Animal Handling</span></p>
+        </button>
+      <button class="button statbutton" id="insibtn" onclick="rollInsight()">
+   <p class="stat-score">+<span id="insigscore">0</span> Insight</span></p>
+        </button>
+      <button class="button statbutton" id="medibtn" onclick="rollMedicine()">
+   <p class="stat-score">+<span id="mediscore">0</span> Medicine</span></p>
+        </button>
+      <button class="button statbutton" id="percbtn" onclick="rollPerception()">
+   <p class="stat-score">+<span id="percscore">0</span> Perception</span></p>
+        </button>
+      <button class="button statbutton" id="survbtn" onclick="rollSurvival()">
+   <p class="stat-score">+<span id="survscore">0</span> Survival</span></p>
+        </button>
+      <button class="button statbutton" id="decbtn" onclick="rollDeception()">
+   <p class="stat-score">+<span id="decscore">0</span> Deception</span></p>
+        </button>
+      <button class="button statbutton" id="intimbtn" onclick="rollIntimidation()">
+   <p class="stat-score">+<span id="intimscore">0</span> Intimidation</span></p>
+        </button>
+      <button class="button statbutton" id="perfbtn" onclick="rollPerformance()">
+   <p class="stat-score">+<span id="perfscore">0</span> Performance</span></p>
+        </button>
+      <button class="button statbutton" id="persubtn" onclick="rollPersuasion()">
+   <p class="stat-score">+<span id="persuscore">0</span> Persuasion</span></p>
+        </button>
+</div>
+<div class="container">
+  <h3>Other Stats</h3>
+  <div class="triple-grid">
+  <div class="statbox">
+<p class="stat-score">Spellcasting</p>
+<p class="stat-score"><span id="spellcasting">Loading...</span></p>
+    </div>
+      <div class="container">
+      <button class="button statbutton" id="spellatkbtn" onclick="rollSpellAttack()">
+        <p class="stat-score">Spcst Mod.
+   <p class="stat-score">+<span id="spcastmod">0</span></p>
+        </button></div>
+  <div class="statbox">
+<p class="stat-score">Spell Save</p>
+<p class="stat-score"><span id="spellsave">Loading...</span></p>
+    </div>
+  <div class="statbox">
+<p class="stat-score"><small>Passive Perception</small></p>
+<p class="stat-score"><span id="pasper">0</span></p>
+    </div>
+  <div class="statbox">
+<p class="stat-score">Movement Speed</p>
+<p class="stat-score"><span id="speed">0 ft</span></p>
+    </div>
+  <div class="statbox">
+<p class="stat-score">PB</p>
+<p class="stat-score"><span id="prof">0</span></p>
+    </div>
+    </div>
+    <br>
+    <br>
+      <div class="restbox">
+  <div class="container">
+    <h3>Damage and Healing</h3>
+    <div class="container">
+<center>
+<textarea id="dmgheal" placeholder="Damage or Healing received"></textarea>
+<br>
+<br>
+
+<button type="submit" class="button dmgbtn" id="dmgbtn" onclick="damageinput()">
+  Record Damage
+  <br>
+  </button>
+  <br>
+  <br>
+<button type="submit" class="button healbtn" id="healbtn" onclick="healinput()">
+  Record Healing
+  <br>
+  </button>
+
+
+</center>
+<br>
+    <hr>
+    <br>
+<h3>Resting</h3>
+<p class="small-text"><i>Rest is vital to keep your character in adventuring shape!</i></p>
+<hr>
+<div class="exhbox">
+<p class="stat-score">Current Exhaustion: <span id="Exhaustion">0</span></p> <button type="button" class="button plusbtn" id="plsbtn" onclick="addExhaust()"> </button> <button type="button" class="button minusbtn" id="minusbutn" onclick="minusExhaust()"> </button>
+ </div>
+ <p class="small-text"><small><i>Exhaustion reduces all of your skills and, at higher levels, has other effects as well. Avoid it by staying well-rested!</i></small></p> 
+
+ <br>
+ <hr>
+<br>
+<div class="button-grid">
+  <div class="container">
+    <center>
+    <button type="button" class="button shortrestbutton" id="shortrest" onclick="recordshort()">
+      Record Short Rest
+      </button>
+      <br>
+      <br>
+    <button type="button" class="button shortrestbutton" id="hitdiebtn" onclick="runHeal()">
+      Spend Hit Die
+      </button>
+      <br>
+      <br>
+    <p class="stat-score">Hit Dice <br><span id="Hit Dice"> 0</span> / <span id="Max Hit Dice"> 0</b></p>
+ </center>
+    </div>
+  <div class="container">
+    <center>
+    <button type="button" class="button restbutton" id="longrest" onclick="recordlong()">
+      Record Long Rest
+      </button>
+      <br>
+      <br>
+ <br>
+ <br>
+  </center>
+    </div>
+  <div class="container">
+    <center>
+    <button type="button" class="button restbutton" id="completerest" onclick="recordcomplete()">
+      Record Complete Rest
+      </button>
+
+  </center>
+    </div>
+  </div>
+ 
+    </div>
+
+
+
+  </center>
+</div>
+<br>
+<br>
+<div class="statbox">
+  <h3>Actions in Combat</h3>
+  <div class="action-grid">
+        <div class="container">
+     <p class="stat-value">Attack/Range</p>
+      </div>
+    <div class="container">
+     <p class="stat-value">Bonus to Hit</p>
+      </div>
+    <div class="container">
+     <p class="stat-value">Range</p>
+      </div>
+    <div class="container">
+     <p class="stat-value">Damage</p>
+      </div>
+
+    <div class="container">
+     <button type="button" class="button atkbtn" id="atk1" onclick="attack1()">
+      <span id="atk1name">Atk1</span>
+      </button>
+      </div>
+    <div class="container">
+     <p class="stat-value"><span id="atk1bonus"></span></p>
+      </div>
+    <div class="container">
+     <p class="stat-value"><span id="atk1range"></span></p>
+      </div>
+      <div class="container">
+    <button type="button" class="button atkdmgbtn" id="dmg1" onclick="dmg1()">
+     <span id="atk1dmg"></span>
+     </button>
+      </div>
+
+      <div class="container">
+     <button type="button" class="button atkbtn" id="atk2" onclick="attack2()">
+      <span id="atk2name">Atk2</span>
+      </button>
+      </div>
+    <div class="container">
+     <p class="stat-value"><span id="atk2bonus"></span></p>
+      </div>
+    <div class="container">
+     <p class="stat-value"><span id="atk2range"></span></p>
+      </div>
+      <div class="container">
+    <button type="button" class="button atkdmgbtn" id="dmg2" onclick="dmg2()">
+     <span id="atk2dmg"></span>
+     </button>
+      </div>
+
+ <div class="container">
+     <button type="button" class="button atkbtn" id="atk3" onclick="attack3()">
+      <span id="atk3name">Atk3</span>
+      </button>
+      </div>
+    <div class="container">
+     <p class="stat-value"><span id="atk3bonus"></span></p>
+      </div>
+    <div class="container">
+     <p class="stat-value"><span id="atk3range"></span></p>
+      </div>
+      <div class="container">
+    <button type="button" class="button atkdmgbtn" id="dmg3" onclick="dmg3()">
+     <span id="atk3dmg"></span>
+     </button>
+      </div>
+
+    </div>
+  </div>
+ </center>
+        <!--</div>
+
+    </div>
+   
+
+
+</div>-->
+  </div>
+
+</body>
+
+</html>
